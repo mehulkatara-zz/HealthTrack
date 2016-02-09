@@ -2,22 +2,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item android:id="@+id/nav_camara" android:icon="@android:drawable/ic_menu_camera"
-            android:title="Import" />
-        <item android:id="@+id/nav_gallery" android:icon="@android:drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item android:id="@+id/nav_slideshow" android:icon="@android:drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item android:id="@+id/nav_manage" android:icon="@android:drawable/ic_menu_manage"
-            android:title="Tools" />
+        <item android:id="@+id/nav_camara" android:icon="@drawable/profile"
+            android:title="Profile" />
+        <item android:id="@+id/nav_gallery" android:icon="@android:drawable/ic_menu_search"
+            android:title="Probability Diabetes" />
+
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Recommendation">
         <menu>
-            <item android:id="@+id/nav_share" android:icon="@android:drawable/ic_menu_share"
-                android:title="Share" />
-            <item android:id="@+id/nav_send" android:icon="@android:drawable/ic_menu_send"
-                android:title="Send" />
+            <item android:id="@+id/nav_slideshow" android:icon="@drawable/exercise"
+                android:title="Exercise to Do" />
+            <item android:id="@+id/nav_manage" android:icon="@drawable/food"
+                android:title="Diet and Food Tips" />
+            <item android:id="@+id/nav_share" android:icon="@drawable/drug"
+                android:title="Anti Diabetic medication" />
+
+        </menu>
+    </item>
+
+    <item android:title="About Us">
+        <menu>
+            <item android:id="@+id/contact" android:icon="@android:drawable/ic_dialog_email"
+                android:title="Contact" />
+            <item android:id="@+id/nav_send" android:icon="@drawable/help"
+                android:title="Help" />
         </menu>
     </item>
 
