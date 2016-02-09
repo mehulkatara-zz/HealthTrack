@@ -3,9 +3,9 @@
 
     <group android:checkableBehavior="single">
         <item android:id="@+id/nav_camara" android:icon="@drawable/profile"
-            android:title="Profile" />
+            android:title="My Profile" />
         <item android:id="@+id/nav_gallery" android:icon="@android:drawable/ic_menu_search"
-            android:title="Probability Diabetes" />
+            android:title="Probability Of Diabetes" />
 
     </group>
 
@@ -16,7 +16,7 @@
             <item android:id="@+id/nav_manage" android:icon="@drawable/food"
                 android:title="Diet and Food Tips" />
             <item android:id="@+id/nav_share" android:icon="@drawable/drug"
-                android:title="Anti Diabetic medication" />
+                android:title="Anti Diabetic Medication" />
 
         </menu>
     </item>
@@ -24,7 +24,7 @@
     <item android:title="About Us">
         <menu>
             <item android:id="@+id/contact" android:icon="@android:drawable/ic_dialog_email"
-                android:title="Contact" />
+                android:title="Contact Us" />
             <item android:id="@+id/nav_send" android:icon="@drawable/help"
                 android:title="Help" />
         </menu>
