@@ -14,6 +14,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import youtube.demo.youtubedemo.Fragments.fragment_contact;
+import youtube.demo.youtubedemo.Fragments.fragment_diet;
+import youtube.demo.youtubedemo.Fragments.fragment_exercise;
+import youtube.demo.youtubedemo.Fragments.fragment_help;
+import youtube.demo.youtubedemo.Fragments.fragment_medication;
+import youtube.demo.youtubedemo.Fragments.fragment_probability;
 import youtube.demo.youtubedemo.Fragments.fragment_profile;
 import youtube.demo.youtubedemo.Fragments.fragment_home;
 
@@ -90,14 +96,22 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camara) {
             fm.beginTransaction().replace(R.id.content_frame, new fragment_profile()).commit();
         } else if (id == R.id.nav_gallery) {
+            fm.beginTransaction().replace(R.id.content_frame, new fragment_probability()).commit();
 
         } else if (id == R.id.nav_slideshow) {
+            fm.beginTransaction().replace(R.id.content_frame, new fragment_exercise()).commit();
 
         } else if (id == R.id.nav_manage) {
+            fm.beginTransaction().replace(R.id.content_frame, new fragment_diet()).commit();
 
         } else if (id == R.id.nav_share) {
+            fm.beginTransaction().replace(R.id.content_frame, new fragment_medication()).commit();
+
+        } else if (id == R.id.contact) {
+            fm.beginTransaction().replace(R.id.content_frame, new fragment_contact()).commit();
 
         } else if (id == R.id.nav_send) {
+            fm.beginTransaction().replace(R.id.content_frame, new fragment_help()).commit();
 
         }
 
