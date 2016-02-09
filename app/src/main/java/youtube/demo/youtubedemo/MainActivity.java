@@ -14,8 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import youtube.demo.youtubedemo.Fragments.ImportFragment;
-import youtube.demo.youtubedemo.Fragments.MainFragment;
+import youtube.demo.youtubedemo.Fragments.fragment_profile;
+import youtube.demo.youtubedemo.Fragments.fragment_home;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         FragmentManager fm = getFragmentManager();
-        fm.beginTransaction().replace(R.id.content_frame, new MainFragment()).commit();
+        fm.beginTransaction().replace(R.id.content_frame, new fragment_home()).commit();
     }
 
     @Override
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camara) {
-            fm.beginTransaction().replace(R.id.content_frame, new ImportFragment()).commit();
+            fm.beginTransaction().replace(R.id.content_frame, new fragment_profile()).commit();
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
