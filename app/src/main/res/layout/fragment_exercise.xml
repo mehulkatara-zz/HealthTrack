@@ -9,4 +9,10 @@
         android:text="Exercise"
         android:id="@+id/textView2"
         android:layout_gravity="center" />
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webView"
+        android:layout_gravity="center" />
 </FrameLayout>
