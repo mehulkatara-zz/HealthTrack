@@ -1,6 +1,9 @@
 package youtube.demo.youtubedemo;
 
 import android.app.FragmentManager;
+
+
+
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,7 +16,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import youtube.demo.youtubedemo.Fragments.fragment_contact;
 import youtube.demo.youtubedemo.Fragments.fragment_diet;
 import youtube.demo.youtubedemo.Fragments.fragment_exercise;
@@ -86,6 +88,10 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
