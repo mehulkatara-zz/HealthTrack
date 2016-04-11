@@ -22,7 +22,7 @@ public class fragment_diet extends Fragment {
         WebView webView = (WebView)rootView.findViewById(R.id.webView);
 
         webView.setWebViewClient(new WebViewClient() {
-            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+            public void onReceivedHttpError(WebView view, int errorCode, String description, String failingUrl) {
 
             }
         });
