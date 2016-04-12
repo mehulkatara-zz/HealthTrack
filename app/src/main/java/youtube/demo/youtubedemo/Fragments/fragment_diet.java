@@ -1,6 +1,7 @@
 package youtube.demo.youtubedemo.Fragments;
 
 import android.app.Fragment;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -8,6 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import youtube.demo.youtubedemo.R;
 
@@ -43,8 +48,16 @@ public class fragment_diet extends Fragment {
         webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         webView.setScrollbarFadingEnabled(false);
 
-        webView.loadUrl("file:///android_asset/7.htm");
+        Date date = new Date();
+        SimpleDateFormat ft = new SimpleDateFormat ("dd");
 
+        Uri.Builder builder = new Uri.Builder();
+        builder.scheme("file")
+                .appendPath("android_asset")
+                .appendPath(ft.format(date)+ ".htm");
+        String myUrl = builder.build().toString();
+
+        webView.loadUrl(myUrl);
         return rootView;
 
 
