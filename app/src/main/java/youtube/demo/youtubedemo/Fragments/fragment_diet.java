@@ -54,7 +54,7 @@ public class fragment_diet extends Fragment {
         Uri.Builder builder = new Uri.Builder();
         builder.scheme("file")
                 .appendPath("android_asset")
-                .appendPath(ft.format(date)+ ".html");
+                .appendPath("1200"+" "+"("+ft.format(date)+")"+".html");
         String myUrl = builder.build().toString();
 
         webView.loadUrl(myUrl);
