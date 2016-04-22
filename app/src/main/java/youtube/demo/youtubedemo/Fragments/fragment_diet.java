@@ -1,6 +1,8 @@
 package youtube.demo.youtubedemo.Fragments;
 
 import android.app.Fragment;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -47,6 +49,8 @@ public class fragment_diet extends Fragment {
 
         webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         webView.setScrollbarFadingEnabled(false);
+      //  SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+      //  String age = sharedPref.getString("age","");
 
         Date date = new Date();
         SimpleDateFormat ft = new SimpleDateFormat ("dd");
