@@ -28,6 +28,44 @@ public class fragment_profile extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
+
+        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        String fillage = sharedPref.getString("age","");
+        String fillsex = sharedPref.getString("sex","");
+        String fillweight = sharedPref.getString("weight","");
+        String fillheight = sharedPref.getString("height","");
+        String fillgpre = sharedPref.getString("gpre","");
+        String fillgpost = sharedPref.getString("gpost","");
+        String fillupre = sharedPref.getString("upre","");
+        String fillupost = sharedPref.getString("upost","");
+
+        EditText edtTextage = (EditText) view.findViewById(R.id.age);
+        age = (EditText) view.findViewById(R.id.age);
+        edtTextage.setText(fillage);
+        EditText edtTextsex = (EditText) view.findViewById(R.id.sex);
+        sex = (EditText) view.findViewById(R.id.sex);
+        edtTextsex.setText(fillsex);
+        EditText edtTextweight = (EditText) view.findViewById(R.id.weight);
+        weight = (EditText) view.findViewById(R.id.weight);
+        edtTextweight.setText(fillweight);
+        EditText edtTextheight = (EditText) view.findViewById(R.id.height);
+        height = (EditText) view.findViewById(R.id.height);
+        edtTextheight.setText(fillheight);
+        EditText edtTextgpre = (EditText) view.findViewById(R.id.gpre);
+        gpre = (EditText) view.findViewById(R.id.gpre);
+        edtTextgpre.setText(fillgpre);
+        EditText edtTextgpost = (EditText) view.findViewById(R.id.gpost);
+        gpost = (EditText) view.findViewById(R.id.gpost);
+        edtTextgpost.setText(fillgpost);
+        EditText edtTextupre = (EditText) view.findViewById(R.id.upre);
+        upre = (EditText) view.findViewById(R.id.upre);
+        edtTextupre.setText(fillupre);
+        EditText edtTextupost = (EditText) view.findViewById(R.id.upost);
+        upost = (EditText) view.findViewById(R.id.upost);
+        edtTextupost.setText(fillupost);
+
+/*
+
         age = (EditText) view.findViewById(R.id.age);
         sex = (EditText) view.findViewById(R.id.sex);
         weight = (EditText) view.findViewById(R.id.weight);
@@ -37,8 +75,7 @@ public class fragment_profile extends Fragment {
         upre = (EditText) view.findViewById(R.id.upre);
         upost = (EditText) view.findViewById(R.id.upost);
 
-
-
+*/
         Button button = (Button) view.findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener()
         {
@@ -60,7 +97,8 @@ public class fragment_profile extends Fragment {
                 editor.putString("upost",upost.getText().toString());
 
 
-                editor.apply(); //Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background
+
+                editor.commit(); //Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background
                 Toast.makeText(getActivity(),"Profile Saved",Toast.LENGTH_LONG).show();
             }
         });
