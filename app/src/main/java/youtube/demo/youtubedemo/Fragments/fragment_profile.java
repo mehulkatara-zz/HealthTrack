@@ -40,28 +40,28 @@ public class fragment_profile extends Fragment {
         String fillupost = sharedPref.getString("upost","");
 
         EditText edtTextage = (EditText) view.findViewById(R.id.age);
-        age = (EditText) view.findViewById(R.id.age);
+        age = edtTextage;
         edtTextage.setText(fillage);
         EditText edtTextsex = (EditText) view.findViewById(R.id.sex);
-        sex = (EditText) view.findViewById(R.id.sex);
+        sex = edtTextsex;
         edtTextsex.setText(fillsex);
         EditText edtTextweight = (EditText) view.findViewById(R.id.weight);
-        weight = (EditText) view.findViewById(R.id.weight);
+        weight = edtTextweight;
         edtTextweight.setText(fillweight);
         EditText edtTextheight = (EditText) view.findViewById(R.id.height);
-        height = (EditText) view.findViewById(R.id.height);
+        height = edtTextheight;
         edtTextheight.setText(fillheight);
         EditText edtTextgpre = (EditText) view.findViewById(R.id.gpre);
-        gpre = (EditText) view.findViewById(R.id.gpre);
+        gpre = edtTextgpre;
         edtTextgpre.setText(fillgpre);
         EditText edtTextgpost = (EditText) view.findViewById(R.id.gpost);
-        gpost = (EditText) view.findViewById(R.id.gpost);
+        gpost = edtTextgpost;
         edtTextgpost.setText(fillgpost);
         EditText edtTextupre = (EditText) view.findViewById(R.id.upre);
-        upre = (EditText) view.findViewById(R.id.upre);
+        upre = edtTextupre;
         edtTextupre.setText(fillupre);
         EditText edtTextupost = (EditText) view.findViewById(R.id.upost);
-        upost = (EditText) view.findViewById(R.id.upost);
+        upost = edtTextupost;
         edtTextupost.setText(fillupost);
 
 /*
@@ -98,7 +98,7 @@ public class fragment_profile extends Fragment {
 
 
 
-                editor.commit(); //Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background
+                editor.apply(); //Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background
                 Toast.makeText(getActivity(),"Profile Saved",Toast.LENGTH_LONG).show();
             }
         });
