@@ -98,7 +98,7 @@ public class fragment_profile extends Fragment {
 
 
 
-                editor.apply(); //Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background
+                editor.apply();
                 Toast.makeText(getActivity(),"Profile Saved",Toast.LENGTH_LONG).show();
             }
         });
