@@ -23,6 +23,7 @@ public class fragment_profile extends Fragment {
 
 
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -64,7 +65,8 @@ public class fragment_profile extends Fragment {
         upost = edtTextupost;
         edtTextupost.setText(fillupost);
 
-/*
+
+       /*
 
         age = (EditText) view.findViewById(R.id.age);
         sex = (EditText) view.findViewById(R.id.sex);
@@ -95,6 +97,7 @@ public class fragment_profile extends Fragment {
                 editor.putString("gpost",gpost.getText().toString());
                 editor.putString("upre",upre.getText().toString());
                 editor.putString("upost",upost.getText().toString());
+
 
 
 

@@ -36,7 +36,16 @@
                     android:hint="Sex"
                     android:textAlignment="center"
                     android:id="@+id/sex"
-                    android:layout_column="2" />
+                    android:layout_column="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Gender"
+                    android:id="@+id/textView8"
+                    android:layout_column="4" />
+
             </TableRow>
 
             <TableRow
@@ -51,7 +60,15 @@
                     android:hint="Age"
                     android:textAlignment="center"
                     android:id="@+id/age"
-                    android:layout_column="2" />
+                    android:layout_column="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Year"
+                    android:id="@+id/textView9"
+                    android:layout_column="4" />
             </TableRow>
 
             <TableRow
@@ -66,7 +83,15 @@
                     android:ems="10"
                     android:id="@+id/weight"
                     android:textAlignment="center"
-                    android:layout_column="2" />
+                    android:layout_column="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="KiloGram"
+                    android:id="@+id/textView10"
+                    android:layout_column="4" />
             </TableRow>
 
             <TableRow
@@ -77,28 +102,19 @@
                     android:layout_width="wrap_content"
                     android:textAlignment="center"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
+                    android:inputType="numberDecimal"
                     android:ems="10"
                     android:hint="Height"
                     android:id="@+id/height"
-                    android:layout_column="2" />
-            </TableRow>
+                    android:layout_column="1" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                    </TableRow>
-
-                </TableLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Meter"
+                    android:id="@+id/textView11"
+                    android:layout_column="4" />
             </TableRow>
 
             <TableRow
@@ -125,7 +141,15 @@
                     android:id="@+id/gpre"
                     android:hint="Fasting"
                     android:textAlignment="center"
-                    android:layout_column="2" />
+                    android:layout_column="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="mg/ld"
+                    android:id="@+id/textView12"
+                    android:layout_column="4" />
             </TableRow>
 
             <TableRow
@@ -138,7 +162,15 @@
                     android:id="@+id/gpost"
                     android:hint="Postprandial"
                     android:textAlignment="center"
-                    android:layout_column="2" />
+                    android:layout_column="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="mg/ld"
+                    android:id="@+id/textView13"
+                    android:layout_column="4" />
             </TableRow>
 
             <TableRow
@@ -164,7 +196,15 @@
                     android:id="@+id/upre"
                     android:hint="Fasting"
                     android:textAlignment="center"
-                    android:layout_column="2" />
+                    android:layout_column="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="mg/ld"
+                    android:id="@+id/textView14"
+                    android:layout_column="4" />
             </TableRow>
 
             <TableRow
@@ -177,26 +217,22 @@
                     android:id="@+id/upost"
                     android:hint="Postprandial"
                     android:textAlignment="center"
-                    android:layout_column="2" />
-            </TableRow>
+                    android:layout_column="1" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="mg/ld"
+                    android:id="@+id/textView15"
+                    android:layout_column="4" />
+            </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
             </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
@@ -205,8 +241,7 @@
                 <Button
                     android:text="Save Profile"
                     android:id="@+id/button"
-                    android:layout_column="1"
-                    android:layout_span="2" />
+                    android:layout_column="4" />
             </TableRow>
 
         </TableLayout>
