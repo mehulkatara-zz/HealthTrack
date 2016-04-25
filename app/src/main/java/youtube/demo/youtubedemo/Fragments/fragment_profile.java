@@ -19,7 +19,7 @@ import youtube.demo.youtubedemo.R;
 public class fragment_profile extends Fragment {
 
     EditText age,sex,weight,height,gpre,gpost,upre,upost;
-    Button button;
+
 
 
 

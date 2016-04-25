@@ -21,7 +21,8 @@ import youtube.demo.youtubedemo.Fragments.fragment_diet;
 import youtube.demo.youtubedemo.Fragments.fragment_exercise;
 import youtube.demo.youtubedemo.Fragments.fragment_help;
 import youtube.demo.youtubedemo.Fragments.fragment_medication;
-import youtube.demo.youtubedemo.Fragments.fragment_probability;
+import youtube.demo.youtubedemo.Fragments.fragment_proba;
+import youtube.demo.youtubedemo.Fragments.fragment_status;
 import youtube.demo.youtubedemo.Fragments.fragment_profile;
 import youtube.demo.youtubedemo.Fragments.fragment_home;
 
@@ -99,24 +100,27 @@ public class MainActivity extends AppCompatActivity
        FragmentManager fm = getFragmentManager();
         int id = item.getItemId();
 
-        if (id == R.id.nav_camara) {
+        if (id == R.id.profile) {
             fm.beginTransaction().replace(R.id.content_frame, new fragment_profile()).commit();
-        } else if (id == R.id.nav_gallery) {
-            fm.beginTransaction().replace(R.id.content_frame, new fragment_probability()).commit();
+        } else if (id == R.id.status) {
+            fm.beginTransaction().replace(R.id.content_frame, new fragment_status()).commit();
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.proba) {
+            fm.beginTransaction().replace(R.id.content_frame, new fragment_proba()).commit();
+
+        } else if (id == R.id.exercise) {
             fm.beginTransaction().replace(R.id.content_frame, new fragment_exercise()).commit();
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.diet) {
             fm.beginTransaction().replace(R.id.content_frame, new fragment_diet()).commit();
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.medication) {
             fm.beginTransaction().replace(R.id.content_frame, new fragment_medication()).commit();
 
         } else if (id == R.id.contact) {
             fm.beginTransaction().replace(R.id.content_frame, new fragment_contact()).commit();
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.help) {
             fm.beginTransaction().replace(R.id.content_frame, new fragment_help()).commit();
 
         }

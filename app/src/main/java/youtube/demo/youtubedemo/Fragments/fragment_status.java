@@ -13,15 +13,16 @@ import android.widget.Toast;
 
 import youtube.demo.youtubedemo.R;
 
-public class fragment_probability extends Fragment {
+public class fragment_status extends Fragment {
 
-    float bmiw,bmih,bmi;
-    String bmivalue;
+    float bmiw,bmih,bmi,bmia;
+    Double bmrcal;
+    String bmivalue,bmitips,bmrvalue;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_probability, container, false);
+        View view = inflater.inflate(R.layout.fragment_status, container, false);
 
         SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
         String fillage = sharedPref.getString("age","");
@@ -29,26 +30,45 @@ public class fragment_probability extends Fragment {
         String fillweight = sharedPref.getString("weight","");
         String fillheight = sharedPref.getString("height","");
 
+        bmia = Float.parseFloat(fillage);
         bmiw = Float.parseFloat(fillweight);
         bmih = Float.parseFloat(fillheight);
         bmi = bmiw/(bmih*bmih);
+        bmrcal = (10*bmiw)+(6.25*bmih)-(5*bmia)+5;
+        bmrvalue = String.valueOf(bmrcal);
+
+
+
+
 
         if(bmi<=18.5)
         {
             bmivalue = "Underweight";
+            bmitips = "You need to gain your weight";
 
         }else if(bmi>=18.5 && bmi<=24.9)
         {
             bmivalue = "Normal weight";
+            bmitips = "Maintain your weight";
 
-        }else if(bmi>=25 && bmi<=19.9)
+        }else if(bmi>=25 && bmi<=30)
         {
             bmivalue = "Overweight";
+            bmitips = "Walk daily to loos your weight";
 
-        }else if(bmi>=30)
+        }else if(bmi>=30 && bmi<=35)
         {
-            bmivalue = "Obese";
+            bmivalue = "Obese Class 1";
+            bmitips = "Walk & eat low calorie food";
 
+        }else if(bmi>=35 && bmi<=40)
+        {
+            bmivalue = "Obese Class 2";
+            bmitips = "Daily go to GYM ";
+
+        }else if(bmi>40) {
+            bmivalue = "Obese Class 3";
+            bmivalue = "Take advice from Doctor";
         }
 
 
@@ -56,6 +76,10 @@ public class fragment_probability extends Fragment {
         textView5.setText(String.valueOf(bmi));
         TextView textView6 = (TextView) view.findViewById(R.id.textView6);
         textView6.setText(bmivalue);
+        TextView textView7 = (TextView) view.findViewById(R.id.bmitips);
+        textView7.setText(bmitips);
+        TextView textView17 = (TextView) view.findViewById(R.id.textView17);
+        textView17.setText(bmrvalue);
 
         SharedPreferences.Editor editor = sharedPref.edit();
 
