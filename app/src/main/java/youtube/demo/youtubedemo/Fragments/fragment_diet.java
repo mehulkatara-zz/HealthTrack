@@ -53,7 +53,7 @@ public class fragment_diet extends Fragment {
       //  String age = sharedPref.getString("age","");
 
         Date date = new Date();
-        SimpleDateFormat ft = new SimpleDateFormat ("dd");
+        SimpleDateFormat ft = new SimpleDateFormat ("d");
 
         Uri.Builder builder = new Uri.Builder();
         builder.scheme("file")
