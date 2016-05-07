@@ -29,7 +29,7 @@ public class fragment_proba extends Fragment {
             {
                 // do something
                 FragmentManager fm = getFragmentManager();
-                fm.beginTransaction().replace(R.id.content_frame, new fragment_medication()).commit();
+                fm.beginTransaction().replace(R.id.content_frame, new fragment_diet()).commit();
 
 
             }

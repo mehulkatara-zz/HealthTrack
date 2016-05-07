@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.renderscript.Int2;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +16,7 @@ import youtube.demo.youtubedemo.R;
 
 public class fragment_status extends Fragment {
 
-    float bmiw,bmih,bmi,bmia;
+    Integer bmiw,bmih,bmi,bmia,bmiv;
     Double bmrcal;
     String bmivalue,bmitips,bmrvalue;
 
@@ -30,11 +31,13 @@ public class fragment_status extends Fragment {
         String fillweight = sharedPref.getString("weight","");
         String fillheight = sharedPref.getString("height","");
 
-        bmia = Float.parseFloat(fillage);
-        bmiw = Float.parseFloat(fillweight);
-        bmih = Float.parseFloat(fillheight);
-        bmi = bmiw/(bmih*bmih);
-        bmrcal = (10*bmiw)+(6.25*bmih)-(5*bmia)+5;
+
+        bmia = Integer.parseInt(fillage);
+        bmiw = Integer.parseInt(fillweight);
+        bmih = Integer.parseInt(fillheight);
+        bmi = bmiw/(bmih*bmih/10000);
+        bmrcal = 66+(13.8*bmiw)+(5*bmih)-(6.8*bmia);
+        bmiv = (int)Math.floor(bmrcal);
         bmrvalue = String.valueOf(bmrcal);
 
 
