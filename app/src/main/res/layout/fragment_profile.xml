@@ -241,6 +241,8 @@
                 <Button
                     android:text="Save Profile"
                     android:id="@+id/button"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/transparent"
                     android:layout_column="4" />
             </TableRow>
 
