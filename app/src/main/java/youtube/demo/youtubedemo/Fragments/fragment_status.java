@@ -16,9 +16,9 @@ import youtube.demo.youtubedemo.R;
 
 public class fragment_status extends Fragment {
 
-    Integer bmiw,bmih,bmi,bmia,bmiv;
+    Integer bmiw,bmih,bmi,bmia,bmiv,gpre,gpost,link;
     Double bmrcal;
-    String bmivalue,bmitips,bmrvalue;
+    String bmivalue,bmitips,bmrvalue,sugar;
 
     @Nullable
     @Override
@@ -30,11 +30,17 @@ public class fragment_status extends Fragment {
         String fillsex = sharedPref.getString("sex","");
         String fillweight = sharedPref.getString("weight","");
         String fillheight = sharedPref.getString("height","");
+        String gpr = sharedPref.getString("gpre","");
+        String gpo = sharedPref.getString("gpost","");
+
+
 
 
         bmia = Integer.parseInt(fillage);
         bmiw = Integer.parseInt(fillweight);
         bmih = Integer.parseInt(fillheight);
+        gpre = Integer.parseInt(gpr);
+        gpost = Integer.parseInt(gpo);
         bmi = bmiw/(bmih*bmih/10000);
         bmrcal = 66+(13.8*bmiw)+(5*bmih)-(6.8*bmia);
         bmiv = (int)Math.floor(bmrcal);
@@ -75,6 +81,32 @@ public class fragment_status extends Fragment {
         }
 
 
+
+        if(gpre>=90 && gpre<=110)
+        {
+            if(gpost>=140 && gpost<=160){sugar = "Excellent";}
+            else if(gpost>160 && gpost<180){sugar = "Acceptable";}
+            else if(gpost>=180){sugar = "Action Required";}
+
+        }else if(gpre>=111 && gpre<=140)
+        {
+            if(gpost<=180)
+            {sugar = "Acceptable";}else if (gpost>180){sugar = "Action Required";}
+
+
+        }else if(gpre>140 && gpost>180)
+        {
+            sugar = "Action Required";
+
+        }
+
+        if (bmiv<1400){link=1200;}
+        else if(bmiv<1600){link=1500;}
+        else if(bmiv<1800){link=1600;}
+        else if(bmiv<2000){link=1800;}
+        else if(bmiv>2000){link=2000;}
+
+
         TextView textView5 = (TextView) view.findViewById(R.id.textView5);
         textView5.setText(String.valueOf(bmi));
         TextView textView6 = (TextView) view.findViewById(R.id.textView6);
@@ -83,12 +115,16 @@ public class fragment_status extends Fragment {
         textView7.setText(bmitips);
         TextView textView17 = (TextView) view.findViewById(R.id.textView17);
         textView17.setText(bmrvalue);
+        TextView textView18 = (TextView) view.findViewById(R.id.textView18);
+        textView18.setText(sugar);
 
         SharedPreferences.Editor editor = sharedPref.edit();
 
-        editor.putFloat("bmi",bmi);
+        editor.putInt("bmi",bmi);
+        editor.putInt("bmr",bmiv);
+        editor.putInt("link",link);
         editor.apply();
-        Toast.makeText(getActivity(),"BMI Saved",Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(),"(o_o)",Toast.LENGTH_LONG).show();
 
 
         return view;

@@ -49,8 +49,8 @@ public class fragment_diet extends Fragment {
 
         webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         webView.setScrollbarFadingEnabled(false);
-      //  SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-      //  String age = sharedPref.getString("age","");
+       SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+       Integer link = sharedPref.getInt("link",1200);
 
         Date date = new Date();
         SimpleDateFormat ft = new SimpleDateFormat ("d");
@@ -58,7 +58,7 @@ public class fragment_diet extends Fragment {
         Uri.Builder builder = new Uri.Builder();
         builder.scheme("file")
                 .appendPath("android_asset")
-                .appendPath("1200"+" "+"("+ft.format(date)+")"+".html");
+                .appendPath(link+" "+"("+ft.format(date)+")"+".html");
         String myUrl = builder.build().toString();
 
         webView.loadUrl(myUrl);
