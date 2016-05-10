@@ -6,7 +6,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Do you have high blood pressure?"
+        android:text="Do you smoke ?"
         android:id="@+id/textView2"
         android:layout_gravity="center" />
 
@@ -21,7 +21,7 @@
     <ImageView
         android:layout_width="240dp"
         android:layout_height="239dp"
-        android:src="@drawable/bp"
+        android:src="@drawable/smoke"
         android:id="@+id/imageView6"
         android:layout_gravity="center_horizontal|top" />
 

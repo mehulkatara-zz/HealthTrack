@@ -18,7 +18,7 @@ public class fragment_status extends Fragment {
 
     Integer bmiw,bmih,bmi,bmia,bmiv,gpre,gpost,link;
     Double bmrcal;
-    String bmivalue,bmitips,bmrvalue,sugarpre,sugarpost,sex;
+    String bmivalue,bmitips,bmrvalue,sugarpre,sugarpost,sex,medicine,doze;
 
     @Nullable
     @Override
@@ -128,6 +128,16 @@ public class fragment_status extends Fragment {
             sugarpost = "Low Sugar";
         }
 
+        if(gpost>180)
+        {
+            medicine = "Glucophage";
+            doze = "500mg(0--½--½)";
+        }else
+        {
+            medicine = "Daily Exercise";
+            doze = "Go to Exercise Menu";
+        }
+
 
 
 
@@ -148,6 +158,10 @@ public class fragment_status extends Fragment {
         textView19.setText("Postprandial "+sugarpost);
         TextView textView18 = (TextView) view.findViewById(R.id.textView18);
         textView18.setText("Fasting "+sugarpre);
+        TextView textView21 = (TextView) view.findViewById(R.id.textView21);
+        textView21.setText(medicine);
+        TextView textView22 = (TextView) view.findViewById(R.id.textView22);
+        textView22.setText(doze);
 
         SharedPreferences.Editor editor = sharedPref.edit();
 

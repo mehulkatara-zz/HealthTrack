@@ -1,6 +1,7 @@
 package youtube.demo.youtubedemo.Fragments;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -106,18 +107,27 @@ public class fragment_profile extends Fragment {
             }
         });
 
+        Button button2 = (Button) view.findViewById(R.id.button3);
+        button2.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                // do something
+                FragmentManager fm = getFragmentManager();
+                fm.beginTransaction().replace(R.id.content_frame, new fragment_proba()).commit();
+
+
+            }
+        });
+
         return view;
     }
 
-   /* public void save (View view){
-        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
 
-        SharedPreferences.Editor editor = sharedPref.edit();
 
-        editor.putString("name",age.getText().toString());
-        editor.commit();
-        Toast.makeText(getActivity(),"Data Saved",Toast.LENGTH_LONG).show();
-    }*/
+
+
 
 
 }

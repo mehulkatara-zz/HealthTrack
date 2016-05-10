@@ -6,30 +6,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Do you have high blood pressure?"
+        android:text="Diabetes Level"
         android:id="@+id/textView2"
         android:layout_gravity="center" />
-
-    <Button
-        android:layout_width="171dp"
-        android:layout_height="91dp"
-        android:text="yes"
-        android:background="@android:color/transparent"
-        android:id="@+id/button2"
-        android:layout_gravity="left|bottom" />
 
     <ImageView
         android:layout_width="240dp"
         android:layout_height="239dp"
-        android:src="@drawable/bp"
+        android:src="@drawable/diabetes"
         android:id="@+id/imageView6"
         android:layout_gravity="center_horizontal|top" />
 
-    <Button
-        android:layout_width="171dp"
-        android:layout_height="91dp"
-        android:background="@android:color/transparent"
-        android:text="No"
-        android:id="@+id/button4"
-        android:layout_gravity="right|bottom" />
 </FrameLayout>

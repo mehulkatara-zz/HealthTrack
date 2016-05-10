@@ -11,14 +11,14 @@ import android.widget.Button;
 
 import youtube.demo.youtubedemo.R;
 
-public class fragment_proba extends Fragment {
+public class fragment_bpyes extends Fragment {
 
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_proba, container, false);
+        View view = inflater.inflate(R.layout.fragment_bpyes, container, false);
 
 
         Button yes = (Button) view.findViewById(R.id.button2);
@@ -31,7 +31,7 @@ public class fragment_proba extends Fragment {
             {
                 // do something
                 FragmentManager fm = getFragmentManager();
-                fm.beginTransaction().replace(R.id.content_frame, new fragment_bpyes()).commit();
+                fm.beginTransaction().replace(R.id.content_frame, new fragment_bmi()).commit();
 
 
             }
@@ -45,7 +45,7 @@ public class fragment_proba extends Fragment {
             {
                 // do something
                 FragmentManager fm = getFragmentManager();
-                fm.beginTransaction().replace(R.id.content_frame, new fragment_bpno()).commit();
+                fm.beginTransaction().replace(R.id.content_frame, new fragment_bmino()).commit();
 
 
             }
